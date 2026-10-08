@@ -1,0 +1,7 @@
+packages:
+  - .
+
+allowBuilds: {}
+
+minimumReleaseAgeExclude:
+  - lucide-react@1.53.0
