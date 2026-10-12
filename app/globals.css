@@ -152,45 +152,23 @@ summary:focus-visible {
   align-items: center;
   gap: 11px;
 }
-.brand-mark {
+.brand-logo-horizontal {
   display: block;
-  width: 43px;
-  height: 43px;
-  color: var(--blue);
+  width: auto;
+  height: 52px;
+  max-width: 240px;
+  object-fit: contain;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
 }
-.brand-mark svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+.brand-lockup:hover .brand-logo-horizontal {
+  transform: scale(1.025);
 }
-.brand-wordmark {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  line-height: 1.05;
+.brand-lockup:active .brand-logo-horizontal {
+  transform: scale(0.985);
 }
-.brand-name {
-  color: var(--ink);
-  font-family: "Manrope Variable", Manrope, sans-serif;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.045em;
-}
-.brand-subtitle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-}
-.brand-subtitle i {
-  width: 16px;
-  height: 2px;
-  border-radius: 3px;
-  background: var(--yellow);
+.brand-lockup--footer .brand-logo-horizontal {
+  height: 64px;
+  max-width: 290px;
 }
 .desktop-nav {
   display: flex;
@@ -1660,10 +1638,6 @@ summary:focus-visible {
   gap: 35px;
   padding-bottom: 34px;
 }
-.brand-lockup--footer .brand-mark {
-  width: 40px;
-  height: 40px;
-}
 .footer-brand > p {
   max-width: 280px;
   margin: 15px 0 0;
@@ -1963,15 +1937,9 @@ summary:focus-visible {
     min-height: 68px;
     gap: 9px;
   }
-  .brand-mark {
-    width: 39px;
-    height: 39px;
-  }
-  .brand-name {
-    font-size: 10px;
-  }
-  .brand-subtitle {
-    font-size: 8px;
+  .brand-logo-horizontal {
+    height: 44px;
+    max-width: 185px;
   }
   .button--nav {
     min-height: 39px;
@@ -2305,11 +2273,9 @@ summary:focus-visible {
   .button--text {
     padding-left: 3px;
   }
-  .brand-name {
-    font-size: 9px;
-  }
-  .brand-subtitle {
-    letter-spacing: 0.1em;
+  .brand-logo-horizontal {
+    height: 38px;
+    max-width: 155px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
